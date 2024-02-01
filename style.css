@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+   
+}
+.hero{
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(45deg,#66042d,#30197d);
+    color: #fff;
+    position: relative;
+   
+}
+.container{
+    height: 220px;
+    width: 800px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background: red;
+   text-align: center;
+   font-size: 24px;
+   padding: 15px;
+   
+}
+.clock{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.clock h2{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.container::before{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: rgb(192, 248, 255);
+    border-radius: 6px;
+    top: -50px;
+    left: -50px;
+    position: absolute;
+    box-shadow: 10px 8px 50px rgb(30, 128, 0);
+}
+.container::after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    background: yellow;
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    position: absolute;
+    box-shadow: -10px 8px 50px rgb(128, 0, 124,0.6);
+}
+.clock h2::after{
+    content: "";
+    font-size: 18px;
+    bottom: -5px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+}
+#hrs::after{
+    content: "Hour";
+}
+#mins::after{
+    content: "Min";
+}
+#sec::after{
+    content: "Sec";
+}
